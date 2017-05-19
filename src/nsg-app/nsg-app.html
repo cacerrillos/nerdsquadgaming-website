@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="nsg-app">
+  <template>
+    <style include="iron-flex iron-flex-alignment">
+      :host {
+        display: block;
+      }
+      .bg {
+        max-height: 720px;
+      }
+    </style>
+    <div class="layout horizontal">
+      <div class="flex"></div>
+      <div class="layout vertical">
+        <div class="flex"></div>
+        <img src="../../images/NerdSquadGamesTransparent.png" class="bg">
+        <div class="flex"></div>
+      </div>
+      
+      <div class="flex"></div>
+    </div>
+    
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class NSGApp extends Polymer.Element {
+      static get is() { return 'nsg-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'nsg-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(NSGApp.is, NSGApp);
+  </script>
+</dom-module>

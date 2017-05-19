@@ -1,0 +1,32 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/nsg-app/nsg-app.html",
+  "fragments": [
+  ],
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "bower.json"
+  ],
+  "extraDependencies": [
+    "manifest.json"
+  ],
+  "builds": [
+    {
+      "name": "bundled",
+      "bundle": true,
+      "addServiceWorker": true,
+      "js": {"minify": true},
+      "css": {"minify": true},
+      "html": {"minify": true}
+    },{
+      "name": "unbundled",
+      "js": {"minify": true},
+      "css": {"minify": true},
+      "html": {"minify": true}
+    }
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  }
+}
